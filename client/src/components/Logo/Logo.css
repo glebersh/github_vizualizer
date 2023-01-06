@@ -1,0 +1,19 @@
+.svg-dark {
+  color: #000000;
+}
+
+.svg-light {
+  color: #FFFFFF;
+}
+
+.small {
+  font-size: 36px;
+}
+
+.medium {
+  font-size: 60px;
+}
+
+.large {
+  font-size: 96px;
+}

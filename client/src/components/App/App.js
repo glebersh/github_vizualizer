@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import LoginPage from '../../pages/LoginPage';
 import { setToken } from '../../store/slices/authSlice';
-import TestComp from './test';
+import Header from '../Header';
 
-const CLIENT_ID = 'Iv1.b1610e4ec3f37430';
+import './App.css';
+
+
 const port = 4000;
-
-function redirectToLogin() {
-  window.location.assign('https://github.com/login/oauth/authorize?client_id=' + CLIENT_ID);
-};
 
 const App = () => {
   const dispatch = useDispatch();
-  const _token = useSelector(state => state.authReducer);
-
+  const _token = useSelector(state => state.authReducer.authToken);
+  const colorTheme = useSelector(state => state.themeReducer);
 
   useEffect(() => {
     const URL = window.location.search;
@@ -40,16 +39,11 @@ const App = () => {
 
 
   return (
-    _token ?
-
-      <>
-        < h1 > Title</h1 >
-        <button onClick={redirectToLogin}>
-          Login with GitHub
-        </button>
-      </>
-
-      : <TestComp />
+    <div className={colorTheme === 'light' ? 'app-container light' : 'app-container dark'}
+      data-theme={colorTheme}>
+      {_token !== '' ?
+        <Header /> : <LoginPage />}
+    </div>
   )
 };
 

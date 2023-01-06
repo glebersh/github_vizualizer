@@ -1,0 +1,32 @@
+.login-form-container {
+  border: 1px solid var(--accent-color);
+  padding: 2em 3em;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 40%;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.login-form-title {
+  color: var(--font-color-main);
+  font-size: 2em;
+}
+
+.button {
+  padding: 15px 30px;
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
+  color: var(--font-color-main);
+  border-radius: 15px;
+  transition: all 0.33s;
+  font-weight: 700;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: var(--font-color-secondary);
+  background-color: var(--accent-color);
+  transition: all 0.33s;
+}

@@ -1,0 +1,42 @@
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  min-height: 100vh;
+}
+
+[data-theme='light'] {
+  --primary-color: #f9fafa;
+  --secondary-color: #f9f9f9d7;
+  --font-color-main: #000000;
+  --font-color-secondary: #FFFFFF;
+  --accent-color: #58cc49;
+  --success-color: #64d2ad;
+  --alert-color: #d2140a;
+  --links-color: #347fdb;
+}
+
+
+[data-theme='dark'] {
+  --primary-color: #28292b;
+  --secondary-color: #52555a;
+  --font-color-main: #ffffff;
+  --font-color-secondary: #000000;
+  --accent-color: #58cc49;
+  --success-color: #64d2ad;
+  --alert-color: #d2140a;
+  --links-color: #347fdb;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+.light {
+  background-color: #f9fafa;
+}
+
+.dark {
+  background-color: #28292b;
+}
