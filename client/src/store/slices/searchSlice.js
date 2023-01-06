@@ -24,6 +24,7 @@ export const searchSlice = createSlice({
   name: 'searchData',
   initialState: {
     category: 'users',
+    renderedContentType: '',
     searchData: {},
     loading: false,
     error: false,
@@ -38,6 +39,7 @@ export const searchSlice = createSlice({
       .addCase(getSearchResult.fulfilled, (state, action) => {
         state.loading = false;
         state.error = false;
+        state.renderedContentType = state.category;
         state.searchData = action.payload;
       })
       .addCase(getSearchResult.pending, (state) => {

@@ -1,0 +1,27 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  row-gap: 1.5em;
+}
+
+.mt {
+  margin-top: 3em
+}
+
+.result-card {
+  padding: 10px;
+  border-radius: 15px;
+  width: 250px;
+  height: 250px;
+  background-color: var(--secondary-color);
+  color: var(--font-color-main);
+}
+
+.result-card-img {
+  position: relative;
+  top: 0%;
+  left: 20%;
+  max-width: 150px;
+}

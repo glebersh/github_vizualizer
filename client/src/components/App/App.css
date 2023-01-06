@@ -8,7 +8,7 @@ body,
 
 [data-theme='light'] {
   --primary-color: #f9fafa;
-  --secondary-color: #f9f9f9d7;
+  --secondary-color: #e9e9e9;
   --font-color-main: #000000;
   --font-color-secondary: #FFFFFF;
   --accent-color: #58cc49;
@@ -20,7 +20,7 @@ body,
 
 [data-theme='dark'] {
   --primary-color: #28292b;
-  --secondary-color: #52555a;
+  --secondary-color: #303235;
   --font-color-main: #ffffff;
   --font-color-secondary: #000000;
   --accent-color: #58cc49;

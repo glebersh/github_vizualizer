@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import Layout from '../../pages/Layout/Layout';
 import LoginPage from '../../pages/LoginPage';
+import UserPage from '../../pages/UserPage';
 import { setToken } from '../../store/slices/authSlice';
-import Header from '../Header';
+import ResultCard from '../ResultCard';
 
 import './App.css';
 
@@ -42,7 +45,14 @@ const App = () => {
     <div className={colorTheme === 'light' ? 'app-container light' : 'app-container dark'}
       data-theme={colorTheme}>
       {_token !== '' ?
-        <Header /> : <LoginPage />}
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<ResultCard />} />
+            <Route path='user/:userLogin' element={<UserPage />} />
+          </Route>
+        </Routes>
+        :
+        <LoginPage />}
     </div>
   )
 };
