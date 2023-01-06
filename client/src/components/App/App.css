@@ -14,12 +14,12 @@ body,
   --accent-color: #58cc49;
   --success-color: #64d2ad;
   --alert-color: #d2140a;
-  --links-color: #347fdb;
+  --links-color: #2262b1;
 }
 
 
 [data-theme='dark'] {
-  --primary-color: #28292b;
+  --primary-color: #1c1d1f;
   --secondary-color: #303235;
   --font-color-main: #ffffff;
   --font-color-secondary: #000000;
@@ -38,5 +38,5 @@ body,
 }
 
 .dark {
-  background-color: #28292b;
+  background-color: #1c1d1f;
 }

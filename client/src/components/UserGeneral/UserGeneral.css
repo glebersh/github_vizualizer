@@ -1,0 +1,30 @@
+.list-default {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-general-container {
+  background-color: var(--secondary-color);
+  padding: 2em;
+  border-radius: 15px;
+  color: var(--font-color-main);
+}
+
+.default-link {
+  color: var(--font-color-main);
+  text-decoration: none;
+}
+
+.email-link {
+  transition: 0.33s;
+}
+
+.email-link:hover {
+  transition: 0.33s;
+  color: var(--links-color);
+}
+
+.user-info-li {
+  font-size: 20px;
+}
