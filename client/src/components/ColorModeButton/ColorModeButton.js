@@ -11,8 +11,12 @@ const ColorModeButton = () => {
   function toggleTheme() {
     if (colorTheme === 'light') {
       dispatch(changeTheme('dark'));
+      localStorage.setItem('colorMode', 'dark');
     }
-    else dispatch(changeTheme('light'));
+    else {
+      dispatch(changeTheme('light'));
+      localStorage.setItem('colorMode', 'light');
+    }
   };
 
   return (

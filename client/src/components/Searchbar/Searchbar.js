@@ -1,7 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { changeCategory, getSearchResult } from '../../store/slices/searchSlice';
 import './Searchbar.css';
+
+
 
 
 const Searchbar = () => {
@@ -9,6 +12,7 @@ const Searchbar = () => {
   const selectRef = useRef(null);
   const searchbarRef = useRef(null);
   const [searchbarValue, setSearchbarValue] = useState('');
+  const navigate = useNavigate();
 
   const onFocus = () => {
     selectRef.current.style.borderWidth = '2px';
@@ -22,6 +26,13 @@ const Searchbar = () => {
 
   const submitSearch = () => {
     dispatch(getSearchResult(searchbarValue));
+    navigate('/');
+  };
+
+  const onEnter = (e) => {
+    if (e.key === 'Enter') {
+      submitSearch();
+    }
   };
 
   return (
@@ -35,7 +46,8 @@ const Searchbar = () => {
       <input type='search' placeholder='Search...'
         className='searchbar' ref={searchbarRef}
         onFocus={onFocus} onBlur={onOffFocus}
-        value={searchbarValue} onChange={(e) => setSearchbarValue(e.target.value)} />
+        value={searchbarValue} onChange={(e) => setSearchbarValue(e.target.value)}
+        onKeyUp={(e) => onEnter(e)} />
       <button className='button search-button'
         onClick={submitSearch}>
         <i className="bi bi-search"></i>

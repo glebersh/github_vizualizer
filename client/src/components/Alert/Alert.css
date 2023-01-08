@@ -1,6 +1,6 @@
 .error {
   color: white;
-  background-color: var(--alert-color);
+  background-color: var(--Alert-color);
 }
 
 .success {

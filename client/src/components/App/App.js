@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Layout from '../../pages/Layout/Layout';
 import LoginPage from '../../pages/LoginPage';
+import RepoPage from '../../pages/RepoPage/RepoPage';
 import UserPage from '../../pages/UserPage';
 import { setToken } from '../../store/slices/authSlice';
 import ResultCard from '../ResultCard';
@@ -49,6 +50,7 @@ const App = () => {
           <Route path='/' element={<Layout />}>
             <Route index element={<ResultCard />} />
             <Route path='user/:userLogin' element={<UserPage />} />
+            <Route path='user/:userLogin/repo/:repoName' element={<RepoPage />} />
           </Route>
         </Routes>
         :

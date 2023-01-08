@@ -14,37 +14,39 @@ const UserGeneral = () => {
 
   return (
     <>
-      <h2>General</h2>
       <div className='flex'>
         <img src={avatar_url} />
         <div className='user-general-container'>
           <ul className='list-default'>
-            <li className='user-info-li'>{name}</li>
+            {name && <li className='user-info-li'>{name}</li>}
             <li className='user-info-li'>{login}</li>
-            <li className='user-info-li'>Company: {company}</li>
+            {company && <li className='user-info-li'>Company: {company}</li>}
 
             <h3>Socials</h3>
 
-            <li className='user-info-li'>
-              <i className="bi bi-twitter"></i>
-              <a className='default-link email-link'
-                href={`https://twitter.com/${twitter_username}`}
-                target='_blank'> {twitter_username}
-              </a>
-            </li>
-
-            <li className='user-info-li'>
-              <i className="bi bi-mailbox2"></i>
-              <a className='default-link email-link'
-                href={`mailto:${email}`}
-                target='_blank'> {email}
-              </a>
-            </li>
-
+            {
+              twitter_username && <li className='user-info-li'>
+                <i className="bi bi-twitter"></i>
+                <a className='default-link email-link'
+                  href={`https://twitter.com/${twitter_username}`}
+                  target='_blank'> {twitter_username}
+                </a>
+              </li>
+            }
+            {
+              email &&
+              <li className='user-info-li'>
+                <i className="bi bi-mailbox2"></i>
+                <a className='default-link email-link'
+                  href={`mailto:${email}`}
+                  target='_blank'> {email}
+                </a>
+              </li>
+            }
             <li className='user-info-li'>Followers: {followers}</li>
             <li className='user-info-li'>Following: {following}</li>
           </ul>
-          <p>{bio}</p>
+          {bio && <p>{bio}</p>}
         </div>
       </div>
     </>

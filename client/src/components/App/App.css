@@ -13,7 +13,7 @@ body,
   --font-color-secondary: #FFFFFF;
   --accent-color: #58cc49;
   --success-color: #64d2ad;
-  --alert-color: #d2140a;
+  --Alert-color: #d2140a;
   --links-color: #2262b1;
 }
 
@@ -25,7 +25,7 @@ body,
   --font-color-secondary: #000000;
   --accent-color: #58cc49;
   --success-color: #64d2ad;
-  --alert-color: #d2140a;
+  --Alert-color: #d2140a;
   --links-color: #347fdb;
 }
 

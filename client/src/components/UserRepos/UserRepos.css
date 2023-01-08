@@ -8,3 +8,55 @@
 
   color: var(--font-color-main);
 }
+
+.repo-link {
+  transition: 0.33s;
+  color: var(--links-color);
+  text-decoration: none;
+}
+
+.repo-link:hover {
+  transition: 0.33s;
+  font-weight: 700;
+}
+
+.repo-link:active {
+  color: rgb(37, 37, 209);
+}
+
+.repo-tag {
+  display: inline-block;
+  margin-right: 2em;
+  border: 2px solid black;
+  padding: 5px 10px;
+}
+
+.bi-clipboard,
+.bi-clipboard-check {
+  font-size: 1.25em;
+  margin-left: 1em;
+}
+
+.bi-clipboard-check {
+  color: var(--success-color);
+}
+
+.bi-clipboard+span,
+.bi-clipboard-check+span {
+  margin-left: 1em;
+  font-weight: 700;
+}
+
+.bi-clipboard+span {
+  transition: 0.33s;
+  opacity: 0;
+}
+
+.bi-clipboard:hover {
+  cursor: pointer;
+}
+
+.bi-clipboard:hover+span {
+  transition: 0.33s;
+  opacity: 1;
+}

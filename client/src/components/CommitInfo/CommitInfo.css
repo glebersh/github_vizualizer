@@ -1,0 +1,23 @@
+.commit-info-container {
+  margin-top: 3em;
+}
+
+
+.commit-info-category {
+  margin-top: 2em;
+  border: 3px solid var(--font-color-main);
+  padding: 0;
+  text-indent: 2em;
+}
+
+h4 {
+  width: 150px;
+  margin: -0.8em 0 0 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+}
+
+.commit-id {
+  color: var(--accent-color);
+  font-weight: 700;
+}

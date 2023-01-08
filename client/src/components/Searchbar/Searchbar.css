@@ -36,3 +36,11 @@ option {
 .search-button {
   margin-left: 2em;
 }
+
+.react-select__control {
+  background-color: red;
+}
+
+.react-select {
+  background-color: transparent;
+}

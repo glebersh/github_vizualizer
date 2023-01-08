@@ -22,6 +22,10 @@
 .result-card-img {
   position: relative;
   top: 0%;
-  left: 20%;
   max-width: 150px;
+}
+
+.result-card-text:hover {
+  color: var(--accent-color);
+  transition: 0.33s;
 }

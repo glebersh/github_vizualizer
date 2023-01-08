@@ -1,0 +1,23 @@
+.bi-caret-left-fill,
+.bi-caret-right-fill {
+  color: var(--font-color-main);
+  font-size: 4em;
+}
+
+.bi-caret-left-fill:hover,
+.bi-caret-right-fill:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  color: rgba(87, 87, 87, 0.5);
+}
+
+.branch-card {
+  background-color: var(--secondary-color);
+  color: var(--font-color-main);
+  padding: 30px 30px;
+  border-radius: 15px;
+  width: 50%;
+}
