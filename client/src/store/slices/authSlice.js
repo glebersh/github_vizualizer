@@ -24,11 +24,15 @@ export const authSlice = createSlice({
   name: 'authentification',
   initialState: {
     user: {},
-    authToken: ''
+    authToken: '',
+    loading: true,
+    error: false,
   },
   reducers: {
     setToken: (state, action) => {
       state.authToken = action.payload;
+      state.loading = false;
+      state.error = false;
     }
   },
   extraReducers: (builder) => {

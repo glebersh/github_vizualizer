@@ -32,13 +32,11 @@ export const initializeRepos = createAsyncThunk(
 
 export const getBranchCommits = createAsyncThunk(
   'repo/getBranchCommits',
-  async function ({ repoInfo, index }, { getState, rejectWithValue }) {
+  async function ({ repoInfo, currentBranchIndex }, { getState, rejectWithValue }) {
     try {
       const state = getState();
-      console.log(state.repoReducer?.branches[index]?.name);
-      let requestURL = `https://api.github.com/repos/${repoInfo.userLogin}/${repoInfo.repoName}/commits?sha=${state.repoReducer?.branches[index]?.name}`;
+      let requestURL = `https://api.github.com/repos/${repoInfo.userLogin}/${repoInfo.repoName}/commits?sha=${state.repoReducer?.branches[currentBranchIndex - 1]?.name}`;
       console.log(requestURL);
-
       const response = await fetch(requestURL, {
         method: 'GET',
         headers: {

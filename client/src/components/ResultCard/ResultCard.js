@@ -31,10 +31,13 @@ const ResultCard = () => {
                 resultData?.map(
                   item => (
                     <div key={item.id} className='flex flex-col result-card'>
-                      <p className='result-card-text'>{item?.full_name}</p>
-                      <p className='result-card-text'>{item?.private}</p>
-                      <p className='result-card-text'>{item?.language}</p>
-                      <p className='result-card-text'>{item?.stargazers_count}</p>
+                      <Link to={`repo/${item?.name}`}
+                        className='default-link result-card-text'>{item?.full_name}</Link>
+                      <p className='result-card-text'>
+                        {item?.private}</p>
+                      <p className='result-card-text'>
+                        <i className='bi bi-star-fill'></i>
+                        {item?.stargazers_count}</p>
                     </div>
                   ))
               }

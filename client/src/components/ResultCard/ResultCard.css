@@ -17,6 +17,7 @@
   height: 250px;
   background-color: var(--secondary-color);
   color: var(--font-color-main);
+  box-shadow: 15px 15px 31px 5px rgba(66, 66, 66, 0.215);
 }
 
 .result-card-img {
